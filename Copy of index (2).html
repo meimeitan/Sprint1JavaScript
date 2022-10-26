@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recap Exercise | JavaScript MOOC 4</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Sign up to Our Coding Newsletter!</h1>
+        <form id="form" action="" method="GET" onsubmit="return false">
+            <div>
+                <label for="fullName">Full Name <span>*</span></label>
+                <br>
+                <input required id="fullName" class="input-box" name="fullname" type="text" placeholder="e.g. Jane Doe" >
+                <p id="fullNameValidationMsg"></p> <!-- A proper class is added with javasript-->
+            </div>
+        
+            <div>
+                <label for="email">Email <span>*</span></label>
+                <input required id="email" class="input-box"  name="email" type="email" placeholder="e.g. jane.doe@gmail.com">
+                <p id="emailValidationMsg"></p> <!-- A proper class is added with javasript-->
+            </div>
+
+            <div>
+                <label for="lang">Which language would you most like to hear about?</label>
+                <select  class="input-box"  name="languages" id="lang">
+                  <option value="not given">--</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="PHP">PHP</option>
+                  <option value="Java">Java</option>
+                  <option value="Golang">Golang</option>
+                  <option value="Python">Python</option>
+                  <option value="C#">C#</option>
+                  <option value="C++">C++</option>
+                  <option value="Ruby">Ruby</option>
+                </select>
+            </div>
+            <!--     <div>
+                <label for="password">Password *</label>
+                <input id="password" name="password" type="password">
+            </div> -->
+            <button type="submit" onclick="validateForm(this.form)" id="submitBtn">Submit</button>
+        </form>
+
+        <h3 id="greet"></h3>
+
+        <script src="main.js"></script>
+    </body>
+
+</html>
